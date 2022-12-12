@@ -17,6 +17,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.memorygame.databinding.ActivityMainBinding
 import com.example.memorygame.models.BoardSize
 import com.example.memorygame.models.MemoryCard
 import com.example.memorygame.models.MemoryGame
@@ -25,6 +26,8 @@ import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClic
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
 
     companion object {
         private const val TAG = "MainActivity"
@@ -39,9 +42,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: MemoryBoardAdapter
     private var boardSize: BoardSize = BoardSize.EASY
 
+    //binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        //setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         clRoot = findViewById(R.id.clRoot)
         rvBoard = findViewById(R.id.rvBoard)
