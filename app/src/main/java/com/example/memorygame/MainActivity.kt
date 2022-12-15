@@ -1,8 +1,6 @@
 package com.example.memorygame
 
 import android.animation.ArgbEvaluator
-import android.content.Context
-import android.icu.text.CaseMap.Title
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -19,10 +17,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.memorygame.databinding.ActivityMainBinding
 import com.example.memorygame.models.BoardSize
-import com.example.memorygame.models.MemoryCard
 import com.example.memorygame.models.MemoryGame
-import com.example.memorygame.utils.DEFAULT_ICONS
-import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {

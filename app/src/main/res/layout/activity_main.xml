@@ -15,10 +15,29 @@
         tools:context=".MainActivity">
 
         <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/MemoryGame"
+                android:textAppearance="?attr/textAppearanceHeadline3" />
+        </LinearLayout>
+
+
+        <LinearLayout
             android:id="@+id/llGameInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="?attr/colorSecondaryVariant"
+            android:background="#2DFF00"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +49,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="8dp">
+
 
                 <TextView
                     android:id="@+id/tvNumMoves"
@@ -61,12 +81,11 @@
             android:id="@+id/rvBoard"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:overScrollMode="never"
             app:layout_constraintBottom_toTopOf="@+id/llGameInfo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
